@@ -51,7 +51,8 @@ const co2_solid_carbon = {
           "journal": "Nature Catalysis",
           "year": 2024
         }
-      ]
+      ],
+      "report_file": "09_REPORTS/research_summaries/phase_1_reconnaissance.md"
     },
     {
       "id": "02",
@@ -85,7 +86,8 @@ const co2_solid_carbon = {
           "year": 1998
         }
       ],
-      "recommended_next_question": "What is the process-level energy balance of leading continuous reactor designs, focusing on carbon separation energy?"
+      "recommended_next_question": "What is the process-level energy balance of leading continuous reactor designs, focusing on carbon separation energy?",
+      "report_file": "09_REPORTS/research_summaries/phase_2_thermodynamic_foundations.md"
     },
     {
       "id": "03",
@@ -135,7 +137,8 @@ const co2_solid_carbon = {
       ],
       "uncertainties": "Exact energy penalty for carbon separation from molten salts; long term stability of liquid metal systems in continuous operation.",
       "conclusions": "Molten-salt electrolysis is the most viable path for simultaneous capture and conversion, but separation engineering is unsolved.",
-      "recommended_next_investigation": "Investigate the process-level energy and engineering design for separating solid carbon from a continuous molten-salt reactor."
+      "recommended_next_investigation": "Investigate the process-level energy and engineering design for separating solid carbon from a continuous molten-salt reactor.",
+      "report_file": "09_REPORTS/research_summaries/phase_3_comparative_pathway_analysis.md"
     }
   ]
 };

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Report | Modern Research</title>
+  <meta name="description" content="Full research report for Modern Research.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .report-content h1 { font-size: 1.9rem; margin-top: 2.5rem; margin-bottom: 0.5rem; }
+    .report-content h2 { font-size: 1.4rem; margin-top: 2rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--border-color); }
+    .report-content h3 { font-size: 1.1rem; margin-top: 1.5rem; }
+    .report-content h4 { font-size: 1rem; margin-top: 1.2rem; }
+    .report-content p  { line-height: 1.75; }
+    .report-content ul,
+    .report-content ol { padding-left: 1.5rem; line-height: 1.8; }
+
+    /* Tables */
+    .report-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      overflow-x: auto;
+      display: block;
+    }
+    .report-content th {
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      border: 1px solid var(--border-color);
+      background: var(--border-color);
+      font-weight: 600;
+    }
+    .report-content td {
+      padding: 0.45rem 0.8rem;
+      border: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+    .report-content tr:nth-child(even) td {
+      background: rgba(0,0,0,0.025);
+    }
+
+    /* Inline code */
+    .report-content code {
+      font-family: monospace;
+      background: var(--border-color);
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.88em;
+    }
+
+    /* Blockquote */
+    .report-content blockquote {
+      border-left: 3px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      color: var(--text-muted);
+      margin: 1.2rem 0;
+      font-style: italic;
+    }
+
+    /* Horizontal rule */
+    .report-content hr {
+      border: none;
+      border-top: 1px solid var(--border-color);
+      margin: 2rem 0;
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* Prompt header badge */
+    .prompt-report-header {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px double var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="site-title"><a href="index.html">Modern Research</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><button id="theme-toggle" class="theme-toggle">Toggle Theme</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="report-container">
+        <p style="text-align:center; color: var(--text-muted); font-style: italic; margin-top: 4rem;">Loading report…</p>
+      </div>
+    </main>
+  </div>
+
+  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+    <p>Contact: <a href="mailto:justinmizibujo@gmail.com">justinmizibujo@gmail.com</a></p>
+  </footer>
+
+  <!-- Load project data then app logic -->
+  <script src="data/co2_project.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
