@@ -86,6 +86,47 @@ const co2_solid_carbon = {
         }
       ],
       "recommended_next_question": "What is the process-level energy balance of leading continuous reactor designs, focusing on carbon separation energy?"
+    },
+    {
+      "id": "03",
+      "status": "Completed",
+      "title": "Comparative Pathway Analysis",
+      "goal": "Compare the major technically credible pathways for converting CO2 into solid elemental carbon.",
+      "method": "Literature review and comparative analysis against thermodynamic baselines.",
+      "pathways_investigated": ["Direct Electrochemical Reduction", "Molten-Salt Electrolysis", "Liquid-Metal Systems", "Hydrogen-Assisted Thermochemical Reduction"],
+      "findings": [
+        {
+          "type": "AI-assisted findings",
+          "text": "Molten-salt electrolysis shows the most promise for utilizing low-concentration CO2 and producing varied carbon morphologies at high rates, but faces immense challenges in continuous carbon separation."
+        },
+        {
+          "type": "AI-assisted findings",
+          "text": "The gap between thermodynamic theoretical minimum energy and practical process-level energy is often a factor of 2 to 3, largely due to heating, overpotentials, and separation penalties."
+        },
+        {
+          "type": "Current interpretation",
+          "text": "Continuous removal of solid carbon without catalyst or electrolyte loss is the universal bottleneck for industrial scalability across all pathways."
+        }
+      ],
+      "evidence_quality": "Ranging from Level 1 (Bosch, Molten-salt) to Level 4 (Liquid metals).",
+      "quantitative_results": "Thermodynamic minimum: ~394 kJ/mol CO2. Experimental requirements often exceed 800 kJ/mol (Molten Salt) or 700 kJ/mol (Hydrogen-assisted).",
+      "sources": [
+        {
+          "title": "Room temperature CO2 reduction to solid carbon species on liquid metals featuring atomically thin ceria interfaces",
+          "journal": "Nature Communications",
+          "year": 2019,
+          "doi": "10.1038/s41467-019-08824-8"
+        },
+        {
+          "title": "Molten salt electrolysis: promising technology to capture and transform CO2 into valuable carbon materials",
+          "journal": "The Royal Society of Chemistry",
+          "year": 2024,
+          "doi": "10.1039/D4EE02672G"
+        }
+      ],
+      "uncertainties": "Exact energy penalty for carbon separation from molten salts; long term stability of liquid metal systems in continuous operation.",
+      "conclusions": "Molten-salt electrolysis is the most viable path for simultaneous capture and conversion, but separation engineering is unsolved.",
+      "recommended_next_investigation": "Investigate the process-level energy and engineering design for separating solid carbon from a continuous molten-salt reactor."
     }
   ]
 };
