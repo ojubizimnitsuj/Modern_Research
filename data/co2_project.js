@@ -112,16 +112,25 @@ const co2_solid_carbon = {
       "quantitative_results": "Thermodynamic minimum: ~394 kJ/mol CO2. Experimental requirements often exceed 800 kJ/mol (Molten Salt) or 700 kJ/mol (Hydrogen-assisted).",
       "sources": [
         {
+          "authors": "Esrafilzadeh, D., et al.",
           "title": "Room temperature CO2 reduction to solid carbon species on liquid metals featuring atomically thin ceria interfaces",
           "journal": "Nature Communications",
           "year": 2019,
           "doi": "10.1038/s41467-019-08824-8"
         },
         {
+          "authors": "Dong, H., et al.",
           "title": "Molten salt electrolysis: promising technology to capture and transform CO2 into valuable carbon materials",
-          "journal": "The Royal Society of Chemistry",
+          "journal": "Energy & Environmental Science",
           "year": 2024,
           "doi": "10.1039/D4EE02672G"
+        },
+        {
+          "authors": "Ren, J., et al.",
+          "title": "One-Pot Synthesis of Carbon Nanofibers from CO2",
+          "journal": "Nano Letters",
+          "year": 2015,
+          "doi": "10.1021/acs.nanolett.5b02427"
         }
       ],
       "uncertainties": "Exact energy penalty for carbon separation from molten salts; long term stability of liquid metal systems in continuous operation.",
