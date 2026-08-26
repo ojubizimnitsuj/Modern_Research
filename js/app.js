@@ -125,7 +125,7 @@ function renderProject(data, container) {
         <div class="prompt-section">
           <div class="prompt-section-title">Sources</div>
           <ul class="sources-list">
-            ${prompt.sources.map(s => `
+            ${(prompt.sources || []).map(s => `
               <li><strong>${s.authors}</strong> "${s.title}." <em>${s.journal}</em> (${s.year}).</li>
             `).join('')}
           </ul>
