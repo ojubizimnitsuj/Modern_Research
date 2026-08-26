@@ -139,6 +139,30 @@ const co2_solid_carbon = {
       "conclusions": "Molten-salt electrolysis is the most viable path for simultaneous capture and conversion, but separation engineering is unsolved.",
       "recommended_next_investigation": "Investigate the process-level energy and engineering design for separating solid carbon from a continuous molten-salt reactor.",
       "report_file": "09_REPORTS/research_summaries/phase_3_comparative_pathway_analysis.md"
+    },
+    {
+      "id": "04",
+      "status": "Completed",
+      "title": "Scientific Audit and Process-Level Balance",
+      "goal": "Quantify the process-level mass and energy balance for continuously converting CO₂ into solid carbon in a molten-carbonate system while strictly distinguishing evidence from engineering assumptions.",
+      "method": "Thermodynamic modeling via Python, cross-referenced with primary literature on molten carbonate electrolysis.",
+      "findings": [
+        {
+          "type": "Established findings",
+          "text": "The thermodynamic minimum energy barrier to split pure CO₂ into carbon and oxygen is ~2.56 MWh/tCO₂. Lab-scale batch reactions successfully produce high-value carbon nanofibers in molten carbonates."
+        },
+        {
+          "type": "Model estimates",
+          "text": "Illustrative engineering models suggest practical requirements could range between 7.3 and 14.2 MWh/tCO₂, though these are highly dependent on assumptions about heat recuperation and separation efficiency."
+        },
+        {
+          "type": "Open engineering questions",
+          "text": "The continuous industrial-scale energy consumption is currently impossible to estimate with high confidence due to the lack of experimental data on continuous high-temperature solid extraction and direct air mass-transfer penalties."
+        }
+      ],
+      "uncertainties": "Separation energy, salt entrainment rates, heat integration feasibility for direct air capture into 800°C reactors.",
+      "conclusions": "Molten-carbonate electrolysis is a highly credible candidate for high-value carbon production, but current evidence is insufficient to declare it energetically viable for gigaton-scale atmospheric carbon removal.",
+      "report_file": "09_REPORTS/research_summaries/phase_4_process_level_analysis.md"
     }
   ]
 };
