@@ -62,10 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Determine the site root (handles GitHub Pages subdirectory deployments)
         const base = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
 
+        const updatedLabel = prompt.lastUpdated
+          ? (() => {
+              try {
+                const [y, m, d] = prompt.lastUpdated.split('-').map(Number);
+                return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+                  .format(new Date(y, m - 1, d));
+              } catch (e) { return prompt.lastUpdated; }
+            })()
+          : null;
+
         reportContainer.innerHTML = `
           <a class="back-link" href="project.html?id=${projectId}">← Back to ${data.title}</a>
           <div class="prompt-report-header">
-            <span class="prompt-number">Prompt ${prompt.id} &mdash; ${prompt.status}</span>
+            <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+              <span class="prompt-number">Prompt ${prompt.id} &mdash; ${prompt.status}</span>
+              ${updatedLabel ? `<span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">Last updated: ${updatedLabel}</span>` : ''}
+            </div>
           </div>
           <div class="report-content">
             ${marked.parse(md)}
@@ -113,9 +126,23 @@ function renderProject(data, container) {
   `;
 
   data.prompts.forEach(prompt => {
+    const updatedLabel = prompt.lastUpdated
+      ? (() => {
+          try {
+            // Parse as local date to avoid timezone shift (treat as YYYY-MM-DD local)
+            const [y, m, d] = prompt.lastUpdated.split('-').map(Number);
+            return new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+              .format(new Date(y, m - 1, d));
+          } catch (e) { return prompt.lastUpdated; }
+        })()
+      : null;
+
     html += `
       <article class="prompt">
-        <span class="prompt-number">Prompt ${prompt.id} &mdash; ${prompt.status}</span>
+        <div style="display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+          <span class="prompt-number">Prompt ${prompt.id} &mdash; ${prompt.status}</span>
+          ${updatedLabel ? `<span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">Last updated: ${updatedLabel}</span>` : ''}
+        </div>
         <h3 class="prompt-title">${prompt.title}</h3>
 
         <div class="prompt-section">

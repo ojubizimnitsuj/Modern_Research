@@ -11,6 +11,7 @@ const co2_solid_carbon = {
   "prompts": [
     {
       "id": "01",
+      "lastUpdated": "2026-07-10",
       "status": "Completed",
       "title": "Scientific Reconnaissance",
       "goal": "Establish the scientific and computational landscape of CO₂ → solid carbon conversion.",
@@ -56,6 +57,7 @@ const co2_solid_carbon = {
     },
     {
       "id": "02",
+      "lastUpdated": "2026-07-28",
       "status": "Completed",
       "title": "Thermodynamic Foundations",
       "goal": "Establish the fundamental thermodynamic baseline for converting CO₂ into stable solid carbon.",
@@ -91,6 +93,7 @@ const co2_solid_carbon = {
     },
     {
       "id": "03",
+      "lastUpdated": "2026-08-12",
       "status": "Completed",
       "title": "Comparative Pathway Analysis",
       "goal": "Compare the major technically credible pathways for converting CO2 into solid elemental carbon.",
@@ -142,6 +145,7 @@ const co2_solid_carbon = {
     },
     {
       "id": "04",
+      "lastUpdated": "2026-08-26",
       "status": "Completed",
       "title": "Scientific Audit and Process-Level Balance",
       "goal": "Quantify the process-level mass and energy balance for continuously converting CO₂ into solid carbon in a molten-carbonate system while strictly distinguishing evidence from engineering assumptions.",
