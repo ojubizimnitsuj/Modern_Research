@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def run_model():
-    os.makedirs("00_PROJECT/figures", exist_ok=True)
+    os.makedirs("figures", exist_ok=True)
+    FIG_DIR = "figures"
     
     # Constants
     F = 96485  # C/mol
@@ -79,7 +80,7 @@ def run_model():
     plt.legend()
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.tight_layout()
-    plt.savefig('00_PROJECT/figures/energy_breakdown_audit.png', dpi=300)
+    plt.savefig(f'{FIG_DIR}/energy_breakdown_audit.png', dpi=300)
     plt.close()
 
     # Plot 2: Electrolyte Consumption vs. Entrainment
@@ -93,7 +94,7 @@ def run_model():
     ax.set_ylabel('Salt Loss (kg per tCO2 processed)')
     ax.grid(True, linestyle='--', alpha=0.7)
     plt.tight_layout()
-    plt.savefig('00_PROJECT/figures/entrainment_sensitivity.png', dpi=300)
+    plt.savefig(f'{FIG_DIR}/entrainment_sensitivity.png', dpi=300)
     plt.close()
 
 if __name__ == "__main__":
