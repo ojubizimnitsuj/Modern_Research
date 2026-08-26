@@ -59,6 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return res.text();
       })
       .then(md => {
+        // Determine the site root (handles GitHub Pages subdirectory deployments)
+        const base = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, '/');
+
         reportContainer.innerHTML = `
           <a class="back-link" href="project.html?id=${projectId}">← Back to ${data.title}</a>
           <div class="prompt-report-header">
@@ -68,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
             ${marked.parse(md)}
           </div>
         `;
+
+        // Fix all relative image src paths to absolute so they work on GitHub Pages
+        reportContainer.querySelectorAll('img').forEach(img => {
+          const src = img.getAttribute('src');
+          if (src && !src.startsWith('http') && !src.startsWith('/') && !src.startsWith('data:')) {
+            img.src = base + src;
+          }
+        });
       })
       .catch(err => {
         reportContainer.innerHTML = `<p style="color:red;">Error loading report: ${err.message}</p>`;
